@@ -11,6 +11,13 @@
         public string? LicensPlat { get; set; }
 
 
+        public void ValidateID()
+        {
+            if (Id == 0)
+            {
+                throw new ArgumentNullException("Id må ikke Være 0");
+            }
+        }
         public void ModelValidat()
         {
             if (Model == null)
